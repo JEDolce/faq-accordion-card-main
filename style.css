@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 14px;
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 10rem 1.5rem;
+    padding: 5rem 1.5rem 2rem 1.5rem;
+    border-radius: 20px;
+    background-image: url('images/bg-pattern-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    /*min-height: 27rem auto;*/   
+}
+
+.imagen {
+    display: flex;
+    justify-content: center;
+}
+
+.img {
+    width: 18rem;
+    position: fixed;
+    top: 50px;
+    padding-right: 20px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+}
+
+.text h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    color: hsl(238, 29%, 16%);
+}
+
+.quest {
+    border-bottom: 1px solid hsl(240, 5%, 91%);    
+    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+    margin-top: 1rem;
+}
+
+.quest a {
+    text-decoration: none;
+    color: hsl(237, 12%, 33%);
+}
+
+.quest a:hover {
+    color: hsl(14, 88%, 65%);
+}
+
+.quest a::after {
+    content: url('images/icon-arrow-down.svg');
+    position: absolute;
+    right: 50px;
+    transition: all 1s;
+}
+
+.rotate::after {
+    content: url('images/icon-arrow-down.svg');
+    position: absolute;
+    right: 50px;
+    transition: all 1s;
+    transform: rotateX(180deg);
+}
+
+p {
+    color: hsl(240, 6%, 50%);
+    padding-top: 0.5rem;
+}
+
+.display {
+    display: none;
+}
+
+
+/* Desktop */
+
+@media screen and (min-width: 900px) {
+
+    .container {
+        flex-direction: row;
+        min-width: 50rem;
+        height: 30rem;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        background-image: url('images/bg-pattern-desktop.svg');
+        background-repeat: no-repeat;
+        background-position: left -320px center, left -530px top -270px;
+        background-size: 40rem 40rem;
+    }
+
+    .imagen {
+        position: relative;
+        width: 25rem; 
+        background-image: url('images/illustration-woman-online-desktop.svg');
+        background-repeat: no-repeat;
+        background-size: 400px 300px;
+        background-position: left -80px center, left -530px top -270px;
+    }
+
+    .imagen::before {
+        content: url('images/illustration-box-desktop.svg');
+        position: absolute;
+        top: 200px;
+        left: -100px;
+    }
+
+    img {
+        display: none;
+    }
+
+    .text {
+        position: absolute;
+        right: 0;
+        top: 3rem;
+        width: 40%;
+        padding: 0; 
+        margin-right: 6rem;
+    }
+
+    .quest a::after {
+        right: 1.5rem;
+    }
+
+    p {
+        color: hsl(240, 6%, 50%);
+        padding-top: 0.5rem;
+    }
+
+    
+}
+
